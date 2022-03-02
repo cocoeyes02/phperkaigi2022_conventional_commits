@@ -13,4 +13,4 @@ RUN apt-get update \
     && curl -sS https://getcomposer.org/installer | php -- --version=1.10.15 \
     && mv composer.phar /usr/local/bin/composer
 
-WORKDIR /var/www/html/quickstart-intermediate
+WORKDIR /var/www/html/laravel
