@@ -1,6 +1,6 @@
 {
     "config": {
-        "git-directory": "../.git"
+        "git-directory": "./.git"
     },
     "commit-msg": {
         "enabled": true,
