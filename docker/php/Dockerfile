@@ -13,4 +13,4 @@ RUN apt-get update \
     && curl -sS https://getcomposer.org/installer | php -- --version=2.2.7 \
     && mv composer.phar /usr/local/bin/composer
 
-WORKDIR /var/www/html/laravel
+WORKDIR /var/www/html/

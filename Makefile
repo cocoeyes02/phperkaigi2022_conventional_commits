@@ -1,6 +1,6 @@
 PHP = docker-compose run --rm app
 
-.PHONY: up down artisan composer
+.PHONY: up down artisan composer commitmessage
 
 up:
 	docker-compose up -d --force-recreate --build
@@ -16,3 +16,6 @@ composer:
 
 test:
 	$(PHP) vendor/phpunit/phpunit/phpunit tests/
+
+commitmessage:
+	./vendor/bin/conventional-commits prepare
