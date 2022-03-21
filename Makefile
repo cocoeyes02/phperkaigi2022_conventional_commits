@@ -4,6 +4,7 @@ PHP = docker-compose run --rm app
 
 initial:
 	cp .env.example .env
+	docker-compose exec app php artisan key:generate
 
 up:
 	docker-compose up -d --force-recreate --build
