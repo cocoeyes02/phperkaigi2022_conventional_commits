@@ -18,13 +18,16 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: sample
+      MYSQL_DATABASE: todo
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+      TZ: "Asia/Tokyo"
     ports:
       - "3306:3306"
     volumes:
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql/initdb.d:/docker-entrypoint-initdb.d
       - mysql-data:/var/lib/mysql
 volumes:
   mysql-data:

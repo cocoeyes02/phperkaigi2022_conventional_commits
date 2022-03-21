@@ -1,6 +1,9 @@
 PHP = docker-compose run --rm app
 
-.PHONY: up down artisan composer commitmessage
+.PHONY: initial up down artisan composer commitmessage
+
+initial:
+	cp .env.example .env
 
 up:
 	docker-compose up -d --force-recreate --build
